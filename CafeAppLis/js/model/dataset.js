@@ -1,3 +1,7 @@
+/**
+ * Foi criado uma constante que são guardada as informações em um JSON do javascript. Com propriedades id, nome e description.
+ * As informações são iniciadas e executas através do bootstrap de forma dinâmica com o preenchimento modal do formulário.
+ */
 const dataset = [
   {
     id: 1,
@@ -28,5 +32,5 @@ const dataset = [
       'Um suco (português brasileiro) ou sumo (português europeu) é uma bebida produzida do líquido extraído de frutos. Além dos frutos, sucos também podem ser obtidos pelo processamento de outras partes dos vegetais, tais como folhas, talos ou raízes.',
   },
 ];
-
+//Exportação padrão do módulo dataset.
 export default dataset;

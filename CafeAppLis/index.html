@@ -1,34 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html> 
+  <!-- A tag html utilizada para informar a estrutura de um  site-->
 
 <head>
+  <!-- Cabeçalho da página de configurações dentro da página-->
+
 
   <meta charset="UTF-8">
   <title>Document</title>
 
   <!-- Bootstrap - CSS -->
+  <!-- Utilização do bootstrap-->
+  <!-- A tag serve para importar do bootstrap 5, via CDN. A partir dele é possível ter a aplicação do CSS. Portanto, não é preciso de um CSS em algum diretório.  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Estilo da aplicação -->
+  <!-- Tag do link é  responsável pelo estilo da página se encontra em um arquivo (.css)-->
   <link rel="stylesheet" href="css/index.css">
 
 
 </head>
 
 <body>
-
+<!-- "Corpo" da página(Estrutura que se encontra dentro da página) -->
   <header>
+    <!-- Cabeçalho da página usado como conteúdo Principal. (Questão de semântica para separar os elementos). Com ele que é possível ser interpretado pelo navegador como cabeçalho da página-->
+
     <!-- Toolbar -->
+
+    <!-- A <nav> tag define um conjunto de links de navegação da página. -->
+
+    <!-- navbar: responsividade e classe do esquema de cores e seus conteúdos são fluídos por padrão,
+      
+    navbar-expand-lg: (Uma barra de navegação padrão é criada com a .navbar classe, seguida por uma classe recolhida responsiva.)
+     Nesse caso foi utilizado o navbar-expand-lg(empilha a barra de navegação verticalmente em telas grandes).
+    bg-primary: qualquer uma das .bg-color classes para alterar a cor de fundo da barra de navegação
+     ( .bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger, .bg-secondarye ).bg-dark.bg-light
+    navbar-dark: cor de texto branca a todos os links na barra de navegação com a .navbar-dark classe ou usar a .navbar-light classe para adicionar uma cor de texto preta .
+    -->
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <!-- .container-fluid: classe fornece um contêiner de largura total , abrangendo toda a largura da janela de visualização -->
+
+      <!-- A <div> tag define uma divisão ou uma seção em um documento (HTML) -->
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+         <!-- A .navbar-brand classe é usada para destacar (a marca/logotipo/nome do projeto da página)--> 
+
+        <!-- A <a> tag define um hiperlink, que é usado para vincular uma página a outra. -->
+        <a class="navbar-brand" href="#"> 
           Coffee
-          <small>Arábica</small>
+          <small>Arábica</small> <!-- A <small> tag define um texto em tamanho menor  -->
+
         </a>
+
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- A tag button serve para fazer a modificação dos menus da navegação  -->
+
+        <!-- .navbar-toggler: usar como plugin collapse( Alterna a visibilidade do conteúdo no projeto em algumas classes e nos plugins JavaScript) e outros comportamentos; -->
+
+        <!-- data-bs-toggle: Geralmente, é recomendado usar um botão com o data-bs-target atributo. Embora não seja recomendado do ponto de vista semântico, também pode usar um link com o href atributo (e um role="button"). Em ambos os casos, o data-bs-toggle="collapse" é necessário. -->
+
+        <!--  aria-expanded: Esse atributo transmite explicitamente o estado atual do elemento desmontável vinculado ao controle para leitores de tela e tecnologias assistivas semelhantes. Se o elemento recolhível for fechado por padrão, o atributo no elemento de controle deverá ter um valor de aria-expanded="false" -->
+
+        <!-- Se o  elemento de controle tem como alvo um único elemento recolhível – ou seja, o data-bs-target atributo está apontando para um id seletor – deve adicionar o aria-controls atributo ao elemento de controle, contendo o id do elemento recolhível.  -->
+
+        <!-- O atributo aria-label é usado para definir uma string na tag do elemento atual. -->
+
+
+
+        <!-- A tag <div> serve para agrupar todos elementos que fazem parte do menu-->
+        
+        <!-- collapse: Alterna a visibilidade do conteúdo no projeto em algumas classes e nos plugins JavaScript -->
+
+        <!-- O navbar-collapse refere-se ao menu que está na visualização móvel com a navbar (contém links e conteúdo amigável).  -->
+
+        <!-- O elemento de divisão HTML <div> é um container genérico para conteúdo de fluxo, que de certa forma não representa nada. Utilizado para fins de estilos-->
+
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
@@ -46,68 +98,87 @@
       </div>
     </nav>
   </header>
+  <!-- Fechamento do cabeçalho da página usado como conteúdo principal (Questão de semântica para separar os elementos).-->
 
-  <main>
-    <section>
+
+  <main> <!-- A tag <main> especifica como conteúdo principal onde centraliza das demais tags, com excessão da header e footer.  -->
+    <section> <!--Utilização da tag <section> é utilizado para agrupar elementos. Ele inclui vários elementos adiconais e nesse caso a sua função será de abrigar carrousel de imagens  -->
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
+
+        <!-- A tag  está relacionada aos botões com indicativos utilziando a class = "carousel -indicators"  -->
+
+        <div class="carousel-indicators">   <!-- Os botões indicativos são vinculados a uma imagem, pois quando clicado será trocado a imagem por outra de forma dinâmica pelo bootstrap. Nesse caso, é resumido em 3 slides como é colocado o aria-label e a quantidade de imagens com o data-bs-slide -->
+
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active">
+
+            <!-- A tag <div> coloca a imagem como principal nesse caso um elemento indicando que aquela imagem foi definida, sendo uma imagem ativa(no momento)  -->
+
+          <div class="carousel-item active">     <!-- Tag img foi colocada para definir a imagem como primeiro -->
 
             <img src="https://images.unsplash.com/photo-1609593147714-46c546d38137?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2551&q=80" class="d-block w-100" alt="...">
+            <!-- Tag img foi colocada para definir a imagem como primeiro -->
 
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
+            <div class="carousel-caption d-none d-md-block">    <!-- A tag div definida para ser colocada como elemento do caroseul -->
+
+              <h5>First slide label</h5> <!-- Título de nível 5 para a imagem 1 -->
+              <p>Some representative placeholder content for the first slide.</p> <!-- Parágrafo definido para a imagem 1 sendo feito uma legenda ! -->
             </div>
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item"> <!-- Tag img colocada para definir a imagem como segundo -->
 
             <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="...">
 
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
+            <div class="carousel-caption d-none d-md-block"> <!-- Título de nível 5 para a imagem 2 -->
+              <h5>Second slide label</h5>  <!-- Título de nível 5 para a imagem 2 -->
+              <p>Some representative placeholder content for the second slide.</p> <!-- Parágrafo definido para a imagem 1 sendo feito uma legenda ! -->
             </div>
           </div>
 
-          <div class="carousel-item">
+          <div class="carousel-item"> <!-- Tag img foi colocada para definir a imagem como terceiro -->
 
             <img src="https://images.unsplash.com/photo-1581068106017-2349c727e298?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" class="d-block w-100" alt="...">
 
             <div class="carousel-caption d-none d-md-block">
               <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
+              <p>Some representative placeholder content for the third slide.</p> <!-- Parágrafo definido para a imagem 1 sendo feito uma legenda ! -->
             </div>
           </div>
 
-          <div class="carousel-item">
+          <div class="carousel-item"> <!-- Tag definida para o elemento adicionado na seção do carrousel, definido como item-->
+
 
             <img src="https://images.unsplash.com/photo-1507915135761-41a0a222c709?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" class="d-block w-100" alt="...">
+            <!-- A tag div definida para ser colocada como elemento do caroseul -->
 
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
+            <div class="carousel-caption d-none d-md-block"> 
+              <h5>Third slide label</h5> <!-- Título de nível 5 para a imagem 2 -->
+              <p>Some representative placeholder content for the third slide.</p> <!-- Parágrafo definido para a imagem 2 sendo feito uma respectiva legenda -->
             </div>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
+          <!-- A tag span que indica o imagem ou nome do botão -->
+          
         </button>
+        <!-- Botão de próximo do carousel, para as imagens contidas na lista das imagens(elementos) -->
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <!-- A tag span irá manter o boostrap com o css e consequentemente o javascript -->
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
+          <!-- A tag span que indica imagem ou nome do botão -->
         </button>
       </div>
 
     </section>
 
     <section>
+      <!-- Título da página que está em primeiro nível das tags h1- h6-->
       <h1>Minha aplicação com JS!</h1>
 
       <a href="semana3_atividade1.html">Semana 3</a>
@@ -122,7 +193,7 @@
 
   <!-- Bootstrap - Js -->
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>
